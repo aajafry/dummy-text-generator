@@ -17,17 +17,20 @@ const formBtn = document.querySelector("#generatorBtn");
 
 const generatedText = document.querySelector("#generatedText");
 
-// variable declaretion and assign the value.
-const inputValue = parseInt(formInput.value);
-const randomValue = Math.floor(Math.random() * dummyText.length);
+
 
 // event listener for text generation.
 formBtn.addEventListener("click", (event) => {
     event.preventDefault();
+   // variable declaretion and assign the value.
+    const inputValue = parseInt(formInput.value);
+    const randomValue = Math.floor(Math.random() * dummyText.length);
+
     if (isNaN(inputValue) || inputValue <= 0 || inputValue >= dummyText.length) {
-        generatedText.innerHTML = `<p>${dummyText[randomValue]}}</p>`
+        generatedText.innerHTML = `<p>${dummyText[randomValue]}</p>`
     } else {
-        const slicedArray = dummyText.slice(0, inputValue);
+        let slicedArray = dummyText.slice(0, inputValue);
+    
         generatedText.innerHTML = slicedArray.map((singleDummyText) => {
             return `<p>${singleDummyText}</p>`;
         }).join("");
