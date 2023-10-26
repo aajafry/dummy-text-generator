@@ -1,0 +1,50 @@
+.app-root{
+    text-align: center;
+}
+.app-root h2{
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+#inputForm{
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+}
+#inputForm fieldset{
+    border: 1px solid deepskyblue;
+}
+#inputForm legend{
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+#inputForm #paragraphNumber{
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+}
+#inputForm #generatorBtn{
+    padding: 18px 16px;
+    border-radius: 5px;
+    border: 1px solid deepskyblue;
+    background: transparent;
+    font-weight: 800;
+    margin-top: 5px;
+}
+#inputForm #generatorBtn:hover{
+    background:deepskyblue;
+    color: white;  
+}
+
+#generatedText{
+    text-align: justify;
+    width: 60%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+}
+
+#defaultText{
+    text-align: center;
+    margin: 10px 0px 0px 165px;
+}
